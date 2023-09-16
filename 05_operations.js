@@ -10,3 +10,5 @@ console.log(+true) // -> 1
 let num = 4
 console.log(++num) // first assign the print 
 //num++ means first print then assign
+// do alag data type ko compare karne pe unpredictable result aata hai 
+// === string ye agar do alag datatype ko compare krenge to result dega hi nhi it checks the datatype strictly before comparing
