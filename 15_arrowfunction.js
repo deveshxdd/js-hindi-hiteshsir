@@ -52,7 +52,7 @@ dev(7)   //this is not used in function
         const nuum = (num1 , num2) => (num1+num2)  //agar implicit return krna ho mtlb 1 to hum sidhe arrow laga ke krskte h
         console.log(nuum(1,3))
 
-        
+
         //---><---//
 
 
