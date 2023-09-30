@@ -43,7 +43,7 @@ const namu = {
 if(Object.keys(namu).length==0){
     console.log("empty")
 }
-// const month = 5
+const month = 5
 switch (month) {
     case 1:
         console.log("january")
@@ -69,4 +69,11 @@ switch (month) {
   /// ye use hota hai during database jab database se koi chiz arhhi to ki agar aae to ye wrna ye
 let val1
 val1 = null??1
-console.log(val1)
+console.log(val1)  // output 1
+let val2 
+val2 = null ?? 10 ?? 12   //jo phle aaega number wahi hoga execute 
+// nullish coalescing opertor is a game of null and undefined
+// -------->  ternary operator  <---------------- //
+// syntax condition ? true : false 
+const valee = 40
+valee > 60 ? console.log("true") : console.log("false")
