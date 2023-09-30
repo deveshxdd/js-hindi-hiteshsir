@@ -65,6 +65,16 @@ dev(7)   //this is not used in function
         const thus = (num)=>{
             console.log(this.num)  //  it give undefined
         }
-        thus(4) 
+        thus(4); 
         // output {} 
-
+// IIFE IMMEDIATELY INVOKED FUNCTION EXPRESSION //
+// IT IS USED ----> IMEEDIATE RESPONSE KE LIA
+// ------> KAI BAAR GLOBAL SCOPE SE FUNCTION ME PROBLEM HOTA HAI 
+(function deve(){
+    console.log(`iife connected1`);
+})();
+//agle function ko likhne ke lia ye ; lagana jruri hai
+// unnamed IIFEE
+( ()=>{
+    console.log("devedh")
+})()
