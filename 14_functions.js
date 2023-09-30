@@ -55,5 +55,9 @@
                 console.log(`the name is ${objjj.pagename} and id is ${objjj.pageid}`);
             }
            myobj(mypage)
-           
+           //another way of writing function
+           const fucn = function(num){
+            return num+3
+           }
+           console.log(fucn(5))
            
