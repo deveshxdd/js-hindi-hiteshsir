@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #262626;">
+    <ul class = "list" style="color: aliceblue;">
+        <li>PYTHON</li>
+    </ul>
+</body>
+<script>
+    
+    // const newlist = document.createElement('li')
+    // const text = document.createTextNode("javascript")
+    // newlist.appendChild(text)
+    // document.querySelector('.list').appendChild(newlist)
+    function changes(lang){
+const newlist = document.createElement('li');
+const text = document.createTextNode(lang);
+newlist.appendChild(text)
+// newlist.innerHTML = `${lang}`
+document.querySelector('.list').appendChild(newlist)
+    }
+    changes(true)
+    changes("javascript")
+    changes("javascript")
+    changes("javascript")
+    changes("javascript")
+    const textt = document.querySelector('li:nth-child(2)')
+textt.textContent = "devesh"
+textt.remove()
+     // we can remove //
+</script>
+</html>

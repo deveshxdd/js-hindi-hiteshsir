@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parent and children</title>
+</head>
+<body style="background-color: #262626;">
+    <div class="main">
+        <div class="names">
+            <h1 class = "color">DEVESH</h1>
+            <h2 class = "color">AAKASH</h2>
+            <h3 class = "color">SANDEEP</h3>
+            <h4 class = "color">RITIK</h4>
+            <h5 class = "color">TANK</h5>
+        </div>
+    </div>
+   
+</body>
+<script>
+    const changes = document.querySelectorAll('.color')
+    console.log(changes)
+   changes.forEach((ch)=>{
+ch.style.color = 'white'
+   })
+   console.log(changes[0].nextElementSibling)
+   console.log(changes[0].parentElement)
+   
+    
+</script>
+</html>
