@@ -1,75 +1,9 @@
-# 4 PROJECTS ON DOM
-# PROJECT 1 COLOR SWITCHER 
-```javascript
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .btn{
-            font-size: xx-large;
-            border-radius: none;
-            border: none;
-            padding: 20px;
-            margin: 3px;
-
-        }
-        #green{
-            background-color: green;
-        }
-        #yellow{
-background-color: yellow;
-        }
-        #red{
-background-color: red;
-        }
-        #blue{
-background-color: blue;
-        }
-    </style>
-</head>
-<body>
-    <div class="main">
-        <button class="btn" id="green">green</button>
-        <button class="btn" id="yellow">yellow</button>
-        <button class="btn" id="red">red</button>
-        <button class="btn" id="blue">blue</button>
-    </div>
-</body>
-<script>
-    const back = document.querySelector('body')
-    const btns = document.querySelectorAll('.btn')
-    btns.forEach((b)=>{
-        console.log(b)
-        b.addEventListener('click' , function(e){
-            console.log(e.target)
-            if(e.target.id == "green"){
-                back.style.backgroundColor = e.target.id
-            }
-            if(e.target.id == "yellow"){
-                back.style.backgroundColor = e.target.id
-            }
-            if(e.target.id == "red"){
-                back.style.backgroundColor = e.target.id
-            }
-            if(e.target.id == "blue"){
-                back.style.backgroundColor = e.target.id
-            }
-        })
-    })
-</script>
-</html>
-``````
-# PROJECT 2 BMI CALCULATOR
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>bmi calculator</title>
     <style>
         #wei{
             color: #262626;
@@ -139,10 +73,8 @@ HEIGHT <input id="hei" type = "text" placeholder="INCHES" >
 </div>
 </body>
 <script> 
-const ans = document.querySelector('#textt')
-const button = document.querySelector('#btn')
-button.addEventListener('click',function(n){
-        const weight = document.querySelector('#wei').value
+function calculater(){
+    const weight = document.querySelector('#wei').value
   
     const height = document.querySelector('#hei').value
 const bmi = 703*(weight/(height*height)) 
@@ -150,24 +82,24 @@ console.log(bmi)
 const ans = document.querySelector('#textt')
 
 if(bmi<=18.4)
-ans.innerHTML = `YOUR BMI IS 😥 ${bmi.toFixed(2)} UNDERWEIGHT`
+ans.innerHTML = `bmi is ${bmi.toFixed(2)} UNDERWEIGHT`
 
 
 else if(bmi>=18.5&&bmi<=24.9){
-    ans.innerHTML = `YOUR BMI IS 🤗 ${bmi.toFixed(2)} NORMAL`
+    ans.innerHTML = `bmi is ${bmi.toFixed(2)} NORMAL`
 }
 else if(bmi>=25&&bmi<=39.9){
-    ans.innerHTML = `YOUR BMI IS 😥 ${bmi.toFixed(2)} OVERWEIGHT`
+    ans.innerHTML = `bmi is ${bmi.toFixed(2)} OVERWEIGHT`
 }
 else if(isNaN){
     ans.innerHTML = "ENTER VALID HEIGHT AND WEIGHT"
 }
 else{
-    ans.innerHTML = `YOUR BMI IS 😥 ${bmi.toFixed(2)} OBESE`
+    ans.innerHTML = `bmi is ${bmi.toFixed(2)} OBESE`
 
 }
-})
+
+}
+calculater()
 </script>
 </html>
-
-```
