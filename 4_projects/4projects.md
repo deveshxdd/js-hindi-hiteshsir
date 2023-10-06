@@ -1,5 +1,5 @@
 # 4 PROJECTS ON DOM
-# PROJECT 1 COLOR SWITCHER  [http://127.0.0.1:5500/4_projects/coloroptimixe.html]
+# PROJECT 1 COLOR SWITCHER 
 ```javascript
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +62,7 @@ background-color: blue;
 </script>
 </html>
 ``````
-# PROJECT 2 BMI CALCULATOR  [http://127.0.0.1:5500/4_projects/bmicalculator.html]
+#PROJECT 2 BMI CALCULATOR
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -111,10 +111,15 @@ background-color: blue;
         #main{
             background-color: antiquewhite;
       
+  
+ 
+  
         }
     body{
         background-color: antiquewhite;
     }
+
+        
 
     </style>
 </head>
@@ -164,5 +169,5 @@ else{
 })
 </script>
 </html>
-```
 
+```
