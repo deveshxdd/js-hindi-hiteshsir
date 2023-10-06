@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            font-size: xx-large;
+            border-radius: none;
+            border: none;
+            padding: 20px;
+            margin: 3px;
+
+        }
+        #green{
+            background-color: green;
+        }
+        #yellow{
+background-color: yellow;
+        }
+        #red{
+background-color: red;
+        }
+        #blue{
+background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <button class="btn" id="green">green</button>
+        <button class="btn" id="yellow">yellow</button>
+        <button class="btn" id="red">red</button>
+        <button class="btn" id="blue">blue</button>
+    </div>
+</body>
+<script>
+    const back = document.querySelector('body')
+    const btns = document.querySelectorAll('.btn')
+    btns.forEach((b)=>{
+        console.log(b)
+        b.addEventListener('click' , function(e){
+            console.log(e.target)
+            if(e.target.id == "green"){
+                back.style.backgroundColor = e.target.id
+            }
+            if(e.target.id == "yellow"){
+                back.style.backgroundColor = e.target.id
+            }
+            if(e.target.id == "red"){
+                back.style.backgroundColor = e.target.id
+            }
+            if(e.target.id == "blue"){
+                back.style.backgroundColor = e.target.id
+            }
+        })
+    })
+</script>
+</html>
