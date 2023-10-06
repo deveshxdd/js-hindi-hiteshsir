@@ -111,15 +111,10 @@ background-color: blue;
         #main{
             background-color: antiquewhite;
       
-  
- 
-  
         }
     body{
         background-color: antiquewhite;
     }
-
-        
 
     </style>
 </head>
