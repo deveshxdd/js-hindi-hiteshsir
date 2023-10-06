@@ -1,6 +1,6 @@
 # 4 PROJECTS ON DOM
 # PROJECT 1 COLOR SWITCHER 
-```javascript
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +63,7 @@ background-color: blue;
 </html>
 ``````
 # PROJECT 2 BMI CALCULATOR
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -167,7 +167,7 @@ else{
 
 ```
 # PROJECT 3 DIGITAL CLOCK
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
