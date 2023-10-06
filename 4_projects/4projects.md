@@ -111,15 +111,10 @@ background-color: blue;
         #main{
             background-color: antiquewhite;
       
-  
- 
-  
         }
     body{
         background-color: antiquewhite;
     }
-
-        
 
     </style>
 </head>
@@ -171,3 +166,47 @@ else{
 </html>
 
 ```
+# PROJECT 3 DIGITAL CLOCK
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL CLOCK</title>
+    <style>
+        body{
+            background-color: #262626;
+        }
+        .time{
+color: aliceblue;
+font-weight: bolder;
+font-size: xx-large;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+       <p class="time" id="hours">HOURS</p>
+       <!-- <p class="time" id="minutes">MINUTES</p>
+       <p class="time" id="sec">SECONDS</p> -->
+    </div>
+</body>
+<script>
+
+    setInterval(() => {
+        const date = new Date()
+    // console.log(date)
+    
+        const hour = document.querySelector('#hours')
+    // const minute = document.querySelector('#minutes')
+    // const second = document.querySelector('#sec')
+    // hour.innerHTML = `${date.getHours()} hours`
+    // minute.innerHTML = `${date.getMinutes()} minutes`
+    // second.innerHTML = `${date.getSeconds()} seconds`
+hour.innerHTML= date.toLocaleTimeString()
+    }, 1000); //har ek second baad ye function khud ko call krega 
+</script>
+</html>```
