@@ -1,5 +1,6 @@
 # 4 PROJECTS ON DOM
 # PROJECT 1 COLOR SWITCHER 
+## http://127.0.0.1:5500/4_projects/coloroptimixe.html
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -63,6 +64,7 @@ background-color: blue;
 </html>
 ``````
 # PROJECT 2 BMI CALCULATOR
+## http://127.0.0.1:5500/4_projects/bmicalculator.html
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -167,6 +169,7 @@ else{
 
 ```
 # PROJECT 3 DIGITAL CLOCK
+## http://127.0.0.1:5500/4_projects/digitalclock.html
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -212,8 +215,155 @@ hour.innerHTML= date.toLocaleTimeString()
 </html>
 ```
 # PROJECT 4 GUESS THE NUMBER
+## http://127.0.0.1:5500/4_projects/guessnumber.html
 ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number</title>
+    <style>
+        body{
+            background-color: rgb(128, 128, 215);
+        }
+        #heading{
+            color: #1d0b46;
+            font-weight: bolder;
+            font-style: italic;
+            font-size: xx-large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
+        }
+        #num{
+            background-color: #040104;
+            color: #fff4f4;
+            font-weight: bolder;
+            font-style: italic;
+            font-size: xx-large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
+        }
+        #submit ,#reset, #restart{
+            background-color: rgb(58, 58, 148);
+            color: #faf0f0;
+            font-weight: bolder;
+            font-style: italic;
+            font-size: xx-large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        #previous , #remaining , #low-high
+{
+    color: #43194b;
+            font-weight: bolder;
+            font-style: italic;
+            font-size: xx-large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}   
+ </style>
+</head>
+<body>
+    <div class="main">
+        <h1 id="heading">GUESS NUMBER GAME</h1>
+        <form id="form">
+        <input type="text" placeholder="Enter Any Number" id="num">
+        <br>
+        <br>
+        <button id="submit">SUBMIT</button>
+        <button id="reset">RESET</button>
+        <button id="restart">RESTART</button>
+    </form>
+    <p id="previous">Previous Guess : </p>
+    <p id="remaining">Guess Remaining 10</p>
+    <p id="low-high"></p>
+    
+    </div>
+</body>
+<script>
+   const randomnum = Math.floor(Math.random()*100+1)
+   console.log(randomnum) 
+   const prev = document.querySelector('#previous')
+   const rem = document.querySelector('#remaining')
+   const message = document.querySelector('#low-high')
+   const num = document.querySelector('#num')
+   const reset = document.querySelector('#reset')
+   const restart = document.querySelector('#restart')
+   const submit = document.querySelector('#submit')
+   let prevguess = []
+   let guesscount = 1
+   let playgame = true
+   submit.addEventListener('click',(n)=>{
+    n.preventDefault()
+    if(num.value<1||num.value>100||isNaN(num.value)){
+        alert("invalid input")
+        prev.innerHTML = `Previous Guess : ${num.value} `
+        guesscount++
+        num.value = ''
+        rem.innerHTML = `Guess Remaining ${11-guesscount}`
+if(guesscount==11){
+    alert("gameover")
+    resetgame()
+}
+        
+    }
+    
+    else if(num.value>randomnum){
+        
+        message.innerHTML = `decrese value`
+        prev.innerHTML = `Previous Guess : ${num.value} `
+        guesscount++
+        num.value = ''
+        rem.innerHTML = `Guess Remaining ${11-guesscount}`
+        if(guesscount==11){
+    alert("gameover")
+    resetgame()
+}
+    }
+    
+    else if(num.value<randomnum){
+        message.innerHTML = `increase value`
+        prev.innerHTML = `Previous Guess : ${num.value} `
+        guesscount++
+        num.value = ''
+        rem.innerHTML = `Guess Remaining ${11-guesscount}`
+        if(guesscount==11){
+    alert("gameover")
+    resetgame()
+}
+    }
+    else{
+        alert("you guessed it right")
+        prev.innerHTML = `Previous Guess : ${num.value} `
+        guesscount++
+        num.value = ''
+        rem.innerHTML = `Guess Remaining ${11-guesscount}`
+        if(guesscount==11){
+    
+    resetgame()
+    
+    alert("gameover")
+}
+    }
+    
+
+})
+function resetgame(){
+    num.value=''
+    guesscount = 1
+    rem.innerHTML = `Guess Remaining ${11-guesscount}`
+    // randomnum = Math.floor(Math.random()*100+1)
+    // document 
+    //         .getElementById("submit") 
+    //         .addEventListener("click", (event) => { 
+    //             event.preventDefault(); 
+    //         }); 
+    message.innerHTML = `Restart the game`
+
+}
+  
+</script>
+</html>
 
 ```
