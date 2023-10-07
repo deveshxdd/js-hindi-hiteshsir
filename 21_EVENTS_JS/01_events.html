@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <div class="main">
+        <ul class="images">
+            <li id="imga">
+                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="cata" srcset="" > 
+                <!-- //onclick='alert("clicked")' ye sahi tarika nahi h click events lagane ka -->
+            </li>
+            <li id="imgb">
+                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="catb" srcset="">
+            </li>
+            <li id="imgc">
+                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="catc" srcset="">
+            </li>
+            <li id="imgd">
+                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="catd" srcset="">
+            </li>
+            <li id="google"><a href="www.google.com">google</a></li>
+            
+        </ul>
+        <!-- It does if it is placed within a form. when <button> is placed outside a form the refresh does not occur! -->
+        <!-- <button id="btn">button</button> -->
+    </div>
+</body>
+<script>
+    const randomnum = Math.floor(Math.random()*100+1)
+   console.log(randomnum) 
+
+    // document.querySelector('#imgb').onclick = function(){
+    //     alert("clicked")
+    // }  ye v utna shi tarika nahi h lagane ka 
+    // phle ke time attachevent aur onevent use hota tha lekin avi best hai addeventlistener
+     //there are three parameters in event listener 1 - events capture 2- function krna kya h 3- false iska mtlb default
+  // we have to study important 
+  // type , defaultprevented , timestamp , 
+  // target , toevent 
+  // imp- source element , currenttarget 
+  // clientX , clientY , screenX , screenY
+  // altkey , ctrlkey , shiftkey , keycode
+
+   ////---->  event propogation 
+        // --------> EVENT BUBBELING (PARTICULAR IMAGE WALA EVENT LEGA)
+//     document.querySelector('.images').addEventListener('click' ,(n)=>{
+// console.log("clicked ul inside")
+//     }, false ) 
+//     document.querySelector('#imgb').addEventListener('click' ,(n)=>{
+// console.log("clicked img")
+// n.stopPropagation()
+//     }, false ) 
+// --------- EVENT CAPTURING (SBSE PHLE LAGA HOGA WO CAPTURE HOGA)
+//     document.querySelector('.images').addEventListener('click' ,(n)=>{
+// console.log("clicked ul inside")
+//     }, true ) 
+//     document.querySelector('#imgb').addEventListener('click' ,(n)=>{
+// console.log("clicked img")
+
+//     }, true ) 
+//
+// document.getElementById('google').addEventListener('click',(n)=>{
+// n.preventDefault()
+// n.stopPropagation()
+// },false)
+// Generally when we click a Button on our page, button performs ts actions and the page gets reloaded to its original state. To do not refresh the page we add event.preventDefault(); at the end of our JavaScript function.
+
+</script>
+</html>

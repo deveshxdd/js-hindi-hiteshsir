@@ -75,6 +75,7 @@
    let prevguess = []
    let guesscount = 1
    let playgame = true
+   
    submit.addEventListener('click',(n)=>{
     n.preventDefault()
     if(num.value<1||num.value>100||isNaN(num.value)){
@@ -133,12 +134,13 @@ if(guesscount==11){
 function resetgame(){
     num.value=''
     guesscount = 1
+    prev.innerHTML = `Previous Guess : ${num.value} `
     rem.innerHTML = `Guess Remaining ${11-guesscount}`
     // randomnum = Math.floor(Math.random()*100+1)
     // document 
     //         .getElementById("submit") 
     //         .addEventListener("click", (event) => { 
-    //             event.preventDefault(); 
+    //             event.stopPropagation() 
     //         }); 
     message.innerHTML = `Restart the game`
 
