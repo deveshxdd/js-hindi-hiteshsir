@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        </style>
+</head>
+<body>
+    <div class="main">
+
+    </div>
+    <!-- <table> -->
+        <!-- <tr>
+            <th>
+                KEY-NAME
+            </th>
+            <th>KEY-CODE</th>
+        </tr>
+        <tr>
+            <td id="key">
+ 
+        </td>
+        <td id="code">
+
+        </td>
+    </tr>
+    </table> -->
+</body>
+<script>
+    const body = document.querySelector('body')
+    const div = document.querySelector('.main')
+    
+    // const code = document.querySelector('#code')
+    // const key = document.querySelector('#key')
+    body.addEventListener('keydown',(n)=>{
+       div.innerHTML =  `<table>
+        <tr>
+            <th>
+                KEY-NAME
+            </th>
+            <th>KEY-CODE</th>
+        </tr>
+        <tr>
+            <td id="key">
+ ${n.key}
+        </td>
+        <td id="code">
+${n.keyCode}
+        </td>
+    </tr>
+    </table>`
+    document.body.appendChild(table)
+        // console.log(n.keyCode)
+        // console.log(n.key)
+        // key.innerHTML = n.key
+        // code.innerHTML  = n.keyCode
+
+    })
+</script>
+</html>

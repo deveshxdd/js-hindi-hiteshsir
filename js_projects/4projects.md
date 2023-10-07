@@ -1,4 +1,4 @@
-# 4 PROJECTS ON DOM
+# JS PROJECTS ON DOM AND EVENTS
 # PROJECT 1 COLOR SWITCHER 
 ## http://127.0.0.1:5500/4_projects/coloroptimixe.html
 ```html
@@ -367,3 +367,112 @@ function resetgame(){
 </html>
 
 ```
+# Project 5 (Background color stop and start)
+## [http://127.0.0.1:5500/2_async_Project/asyncset.html]
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="text">COLOR CHANGING </h1>
+    <button id="btn1">start</button>
+    <button id="btn2">stop</button>
+
+</body>
+<script>
+    const randomnum = Math.random()
+    console.log(randomnum)
+    const back = document.querySelector('body')
+    console.log(back);
+    const start = document.querySelector('#btn1')
+    const stop = document.querySelector('#btn2')
+    let col
+    start.addEventListener('click',(n)=>{
+        const date = new Date()
+        if(!col)
+        col = setInterval(() => {
+        back.style.backgroundColor = '#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
+        console.log(date.getSeconds)
+    },1000);
+    })
+    stop.addEventListener('click',(e)=>{
+clearInterval(col)
+col = null
+    })
+   
+</script>
+</html>
+```
+# project 6 (keypressed information)
+## [http://127.0.0.1:5500/2_async_Project/keypressinfo.html]
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        </style>
+</head>
+<body>
+    <div class="main">
+
+    </div>
+    <!-- <table> -->
+        <!-- <tr>
+            <th>
+                KEY-NAME
+            </th>
+            <th>KEY-CODE</th>
+        </tr>
+        <tr>
+            <td id="key">
+ 
+        </td>
+        <td id="code">
+
+        </td>
+    </tr>
+    </table> -->
+</body>
+<script>
+    const body = document.querySelector('body')
+    const div = document.querySelector('.main')
+    
+    // const code = document.querySelector('#code')
+    // const key = document.querySelector('#key')
+    body.addEventListener('keydown',(n)=>{
+       div.innerHTML =  `<table>
+        <tr>
+            <th>
+                KEY-NAME
+            </th>
+            <th>KEY-CODE</th>
+        </tr>
+        <tr>
+            <td id="key">
+ ${n.key}
+        </td>
+        <td id="code">
+${n.keyCode}
+        </td>
+    </tr>
+    </table>`
+    document.body.appendChild(table)
+        // console.log(n.keyCode)
+        // console.log(n.key)
+        // key.innerHTML = n.key
+        // code.innerHTML  = n.keyCode
+
+    })
+</script>
+</html>```

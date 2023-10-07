@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+<body>
+    <h1 id="h">THIS IS DEVESH</h1>
+    <button id="b">STOP</button>
+    <!-- SET TIME OUT - MATLAB EK PARTICULAR TIME KE BAAD KARO -->
+    <!-- SET TIME INTERVAL MATLAB KRTE RAHO JABTAK TIME INTERVAL H -->
+</body>
+<script>
+    const text = document.querySelector('#h')
+    const msg = (str)=>{
+text.innerHTML = `${str}`
+    }
+   const time = setTimeout(msg,2000,"hii ")
+   document.getElementById('b').addEventListener('click',()=>{
+clearTimeout(time)
+console.log("btn clicked")
+   })
+    
+</script>
+</html>
