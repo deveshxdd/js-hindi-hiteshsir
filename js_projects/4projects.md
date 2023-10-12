@@ -475,4 +475,86 @@ ${n.keyCode}
 
     })
 </script>
-</html>```
+</html>
+```
+# PROJECT 7 rectangle color change
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="center">
+
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="rectangle.js"></script>
+</html>
+```
+```css
+/* CSS -> */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+html , body {
+    height: 100%;
+    width: 100%;
+}
+#center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    border: 1px solid rgb(0, 0, 0);
+    width: 300px;
+    height: 200px;
+}
+/* //sbse phle mouse rectangle pe aaya ye pata karo */
+```
+```javascript
+// JAVASCRIPT
+
+const rectangle = document.querySelector('#center')
+// ab calculate karo ki hum center se left pe hai ya right pe hai
+// color - rgb(255,255,255)
+// range 0-255
+rectangle.addEventListener('mousemove',(details)=>{
+let rectlocation = rectangle.getBoundingClientRect();
+let insiderect = details.clientX-rectlocation.left
+if(insiderect < rectlocation.width/2){
+    console.log(insiderect);
+   var redcolor =  gsap.utils.mapRange(0,rectlocation.width/2,255,0,insiderect)
+//    console.log(redcolor);
+// gsap.to(rectangle , {
+//     backgroundColor: `rgb(${redcolor},0,0)`
+// })
+rectangle.style.backgroundColor = `rgb(${redcolor},0,0)`
+}
+else{
+    // console.log("right")
+    var redcolor =  gsap.utils.mapRange(rectlocation.width/2,rectlocation.width,0,255,insiderect)
+    //    console.log(redcolor);
+    // gsap.to(rectangle , {
+    //     backgroundColor: `rgb(0,0,${redcolor})`
+    // })
+    rectangle.style.backgroundColor = `rgb(0,0,${redcolor})`
+}
+
+
+})
+rectangle.addEventListener('mouseleave',()=>{
+    rectangle.style.backgroundColor = 'white'
+})
+```
+
+
