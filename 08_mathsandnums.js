@@ -13,7 +13,7 @@ console.log(Math.abs(-444))
 console.log(Math.min(1,2,3,4,5))
 console.log(Math.max(1,2,3,4,5,6))
 console.log(Math.random()) // ye zero se 1 ke bich ki random value nikal ke deti hai
-console.log((Math.random()*10) + 1) // 1-10 ke bich me de 
+console.log(Math.floor((Math.random()*10) + 1)) // 1-10 ke bich me de 
 console.log((Math.random()*10) + 1) // 1-10 ke bich me de with decimal 
 console.log(Math.floor((Math.random()*10) + 1)) // 1-10 ke bich me de without decimal 
 // agar hum chahte hai ki fix range tak value mile 

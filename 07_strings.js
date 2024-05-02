@@ -10,7 +10,7 @@ console.log(`hii my name is ${yourname} and my age is ${yourage}`) //always use 
 const newstr = new String('dev-esh')
 console.log(newstr.toUpperCase())
 console.log(newstr.length)
-console.log(newstr.trim())
+console.log(newstr.trim()) // spaces trim krta hai 
 console.log(newstr.charAt(5))
 console.log(newstr.indexOf('v'))
 console.log(newstr.replace('v' , 'i'))

@@ -46,7 +46,7 @@ return yearr.year > 2021
 
  /////// -----> MAPS SAME AS FILTER BUT IT RETURNS ALL <--------////
   const movies = obj.map((mov)=>(mov.year+1))
-//   console.log(movies);   /// ye directly pura return krta h 
+  console.log(movies);   /// ye directly pura return krta h 
 
   //////////////---------> REDUCE METHOD YE THODA ALAG HOTA HAI <----------///
   // ISKE ANDAR HUM DO CHIZ PAAS KRTE HAI EK ARG AUR EK VALUE AGAR ADD KRNA HO//

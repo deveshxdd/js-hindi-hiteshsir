@@ -20,7 +20,7 @@ companyy.welcomemessage()
 // devesh welcome to our company
 // {
 //   username: 'devesh',
-//   designation: 'software developer',
+//    designation: 'software developer',
 //   welcomemessage: [Function: welcomemessage]
 // }
 console.log(this)  //---> output {}  (node environment )

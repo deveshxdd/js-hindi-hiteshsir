@@ -15,3 +15,7 @@ usertwo.email = "hjfdjf"
 usertwo.upi = "ybbl"
 console.log(userone.email)
 console.log(userone.upi)
+
+
+// heap ->>> takes refernce 
+// stack ---> takes copy value

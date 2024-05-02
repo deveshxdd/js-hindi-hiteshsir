@@ -33,7 +33,7 @@ const obj3 ={
 address: "kushinagar",
 hostel: "bnd"
 }
-obj2.__proto__.obj3
+obj2.__proto__.obj3   // to inherit the objects we use proto
 
 console.log(obj2.name)
 console.log(obj3.address)
